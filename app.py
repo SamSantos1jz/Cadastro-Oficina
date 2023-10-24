@@ -35,10 +35,36 @@ class App(ctk.CTk):
                                   text_color="#fff", bg_color="teal").place(x=230, y=20)
         
         span = ctk.CTkLabel(self, text="Por favor preencha todos os campos.", font=("Century Gothic bold",
-                                         12), text_color=["#000", "#fff"]).place(x=50, y=70)
+                                         10), text_color=["#000", "#fff"]).place(x=50, y=70)
+
+        # Entrys
+        name_entry = ctk.CTkEntry(self, width=350, font=("Century Ghotic", 16), fg_color="transparent")
+        contact_entry = ctk.CTkEntry(self, width=350, font=("Century Ghotic", 16), fg_color="transparent")
+        adress_entry = ctk.CTkEntry(self, width=350, font=("Century Ghotic", 16), fg_color="transparent")
+        cel_entry = ctk.CTkEntry(self, width=350, font=("Century Ghotic", 16), fg_color="transparent")
+
 
         # labels
-
+        lb_name = ctk.CTkLabel(self, text="CLIENTE", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+        
+        lb_celular = ctk.CTkLabel(self, text="Celular", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+        
+        lb_telefone = ctk.CTkLabel(self, text="Telefone", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+        
+        lb_endereco = ctk.CTkLabel(self, text="Endereço", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+        
+        lb_cep = ctk.CTkLabel(self, text="CEP", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+        
+        lb_car_name = ctk.CTkLabel(self, text="Automovel", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+       
+        lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
 
 
 
