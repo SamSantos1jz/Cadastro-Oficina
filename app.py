@@ -21,13 +21,13 @@ class App(ctk.CTk):
 
     def layout_config(self):
         self.title("Sistema de cadastro de Oficina")
-        self.geometry("930x500")
+        self.geometry("930x600")
 
     def appaerence(self):
         self.lb_apm = ctk.CTkLabel(self, text="Tema",  bg_color="transparent", 
-                                   text_color=['#000','#fff']).place(x=50, y=430)
+                                   text_color=['#000','#fff']).place(x=50, y=530)
         self.opt_apm = ctk.CTkOptionMenu(self, values=["Light", "Dark", "System"],
-                                        command=self.change_apm).place(x=50, y=460)
+                                        command=self.change_apm).place(x=50, y=560)
         
 
     def all_system(self):
@@ -49,14 +49,15 @@ class App(ctk.CTk):
         date_entry = ctk.CTkEntry(self, width=100, font=("Century Gothic bold", 16), fg_color="transparent")
         payment_entry = ctk.CTkEntry(self, width=150, font=("Century Gothic bold", 16), fg_color="transparent")
         car_entry = ctk.CTkEntry(self, width=250, font=("Century Gothic bold", 16), fg_color="transparent")
-
+        
 
         # ComboBox 
         payment_combo_box = ctk.CTkComboBox(self, values=["---","PAGO", "PENDENTE"], font=("Century Ghotic bold", 14))
         payment_combo_box.set("---")
 
         # OBSERVAÇÕES
-        obs_entry = ctk.CTkTextbox(self, width=830, height=150, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
+        service_entry  = ctk.CTkTextbox(self, width=830, height=100, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
+        obs_entry  = ctk.CTkTextbox(self, width=830, height=60, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
 
 
         # labels
@@ -80,7 +81,10 @@ class App(ctk.CTk):
         
         lb_payment = ctk.CTkLabel(self, text="Visto de pagamento", font=("Century Gothic bold",
                                          13), text_color=["#000", "#fff"])
-       
+        
+        lb_servico = ctk.CTkLabel(self, text="Serviço", font=("Century Gothic bold",
+                                         13), text_color=["#000", "#fff"])
+
         lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold",
                                          13), text_color=["#000", "#fff"])
 
@@ -106,8 +110,11 @@ class App(ctk.CTk):
         lb_payment.place(x=730, y=200)
         payment_combo_box.place(x=730, y=230)
 
-        lb_obs.place(x=50, y=270)
-        obs_entry.place(x=50, y=300)
+        lb_servico.place(x=50, y=270)
+        service_entry.place(x=50, y=300)
+
+        lb_obs.place(x= 50, y=410)
+        obs_entry.place(x= 50, y=440)
 
 
     def change_apm(self, new_appaerence_mode):
